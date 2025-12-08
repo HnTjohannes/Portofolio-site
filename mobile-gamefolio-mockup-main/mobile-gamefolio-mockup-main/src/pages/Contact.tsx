@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="pt-24 pb-16 px-6 max-w-2xl mx-auto">
         <div className="space-y-12 animate-in fade-in-50 duration-700">
           {/* Header */}
@@ -33,12 +33,12 @@ const Contact = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6">
             <Button variant="ghost" size="icon" className="rounded-full" asChild>
-              <a href="mailto:contact@example.com" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:isajohannes2077@gmail.com" target="_blank" rel="noopener noreferrer">
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="rounded-full" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/rainald-isabella-2544a2237/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
@@ -59,7 +59,7 @@ const Contact = () => {
                 className="bg-muted border-border"
               />
             </div>
-            
+
             <div className="space-y-2">
               <Input
                 type="email"
