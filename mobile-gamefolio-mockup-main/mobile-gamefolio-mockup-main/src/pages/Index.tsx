@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { ParallaxSection } from "@/components/ParallaxSection";
+import { ProjectsCarousel } from "@/components/ProjectsCarousel";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -8,7 +9,7 @@ import { useState, useEffect } from "react";
 const Index = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const words = ["Game", "System", "Combat", "Level"];
+  const words = ["Level", "System", "Boss", "Encounter"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,8 +17,8 @@ const Index = () => {
       setTimeout(() => {
         setCurrentWord((prev) => (prev + 1) % words.length);
         setIsAnimating(false);
-      }, 200);
-    }, 1500);
+      }, 300);
+    }, 1700);
 
     return () => clearInterval(interval);
   }, []);
@@ -45,7 +46,7 @@ const Index = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                Game developer specialized in design
+                Any Kind any Time
               </p>
             </div>
 
@@ -78,12 +79,18 @@ const Index = () => {
                 electronic
               </p>
             </div>
+          </div>
+        </section>
 
-            <div className="pt-8">
-              <Button asChild size="lg" className="rounded-full font-semibold text-lg px-8 py-6 hover-scale shadow-lg">
-                <Link to="/portfolio">View Portfolio</Link>
-              </Button>
-            </div>
+        {/* Projects Carousel */}
+        <ProjectsCarousel />
+
+        {/* View Portfolio Button */}
+        <section className="max-w-7xl mx-auto pb-16">
+          <div className="flex justify-center">
+            <Button asChild size="lg" className="rounded-full font-semibold text-lg px-8 py-6 hover-scale shadow-lg border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground">
+              <Link to="/portfolio">View all projects</Link>
+            </Button>
           </div>
         </section>
       </main>
