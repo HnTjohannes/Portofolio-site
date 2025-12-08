@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const Index = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const words = ["Game", "System", "Combat", "Level"];
+  const words = ["Level", "System", "Boss", "Encounter"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,7 +45,7 @@ const Index = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                Game developer specialized in design
+                Game developer specialized in level design
               </p>
             </div>
 
