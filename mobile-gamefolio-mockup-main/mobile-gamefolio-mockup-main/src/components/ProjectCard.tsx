@@ -1,4 +1,5 @@
-import { Play, Clock, Link as LinkIcon } from "lucide-react";
+import { Clock, Link as LinkIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectCardProps {
   title: string;
@@ -8,6 +9,7 @@ interface ProjectCardProps {
   description: string;
   role: string;
   imageUrl?: string;
+  projectId?: string;
 }
 
 export const ProjectCard = ({
@@ -17,22 +19,31 @@ export const ProjectCard = ({
   linkUrl = "#",
   description,
   role,
-  imageUrl = "/placeholder.svg"
+  imageUrl = "/placeholder.svg",
+  projectId
 }: ProjectCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (projectId) {
+      navigate(`/portfolio#${projectId}`);
+    } else {
+      navigate('/portfolio');
+    }
+  };
+
   return (
-    <div className="bg-secondary/80 rounded-2xl overflow-hidden text-white h-full flex flex-col border border-border/30 shadow-lg shadow-black/10 transition-transform duration-200 hover:scale-95">
-      {/* Image/Video Preview */}
+    <div
+      onClick={handleClick}
+      className="bg-secondary/80 rounded-2xl overflow-hidden text-white h-full flex flex-col border border-border/30 shadow-lg shadow-black/10 transition-transform duration-200 hover:scale-95 cursor-pointer"
+    >
+      {/* Image Preview */}
       <div className="relative aspect-video">
         <img
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-12 h-12 bg-muted-foreground/70 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-            <Play className="w-5 h-5 text-background fill-background ml-1" />
-          </div>
-        </div>
       </div>
 
       {/* Content */}
@@ -55,15 +66,15 @@ export const ProjectCard = ({
         </div>
 
         {/* Description */}
-        <p className="text-sm text-center text-[#999999] mb-3 flex-1">
+        <p className="text-sm text-center text-[#EBEBEB] mb-3 flex-1">
           {description}
         </p>
 
-        <p className="text-sm text-center text-[#999999]">
+        <p className="text-sm text-center text-[#EBEBEB]">
           {role}
         </p>
 
-        <p className="text-sm text-center text-[#999999] mt-3 cursor-pointer hover:text-primary-foreground transition-colors">
+        <p className="text-sm text-center text-[#EBEBEB] mt-3 cursor-pointer hover:text-primary-foreground transition-colors">
           Click to view more
         </p>
       </div>

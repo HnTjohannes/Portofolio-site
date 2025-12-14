@@ -9,39 +9,43 @@ import { ProjectCard } from "./ProjectCard";
 
 const projects = [
   {
-    title: "Scales and Steel",
-    duration: "6 months",
+    id: "riders-republic",
+    title: "Riders Republic",
+    duration: "4 months",
     linkLabel: "Website",
     linkUrl: "#",
-    description: "An action platformer that takes place in a dnd style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
-    role: "I worked as a System and level designer: character combat systems, boss encounters and the tutorial. all made in Godot.",
+    description: "Riders Republic is an extreme sport MMO created by Ubisoft. Players can explore a huge open world with various sports and participate to race or tricks competitions with other players.",
+    role: "I worked as a game designer intern: designing multiplayer oriented systems while the game was live.",
     imageUrl: "/placeholder.svg"
   },
   {
-    title: "Ripples of the past",
-    duration: "6 months",
+    id: "judgeball",
+    title: "Judgeball: Lethal Arena",
+    duration: "2 months",
     linkLabel: "Steam",
     linkUrl: "#",
-    description: "A narrative driven choose your own adventure game that takes place in a mysterious village hidden in a forest.",
-    role: "I started out as this games producer and later shifted focus to work on level design for the first level.",
+    description: "A 3D online 3v3 sports and combat game, where players uses the power of their avatar to score goals and kills enemies.",
+    role: "I worked on this project as a game design intern: 3Cs, documentation and prototyping using Unreal blueprints.",
     imageUrl: "/placeholder.svg"
   },
   {
-    title: "make it…!",
-    duration: "48 Hours",
-    linkLabel: "Game-Jam",
+    id: "wandering-clouds",
+    title: "Wandering Clouds",
+    duration: "9 months",
+    linkLabel: "Student project",
     linkUrl: "#",
-    description: "A two player tabletop game where each side tries to either deteriorate or preserve the mental state of the game’s persona. this game is aimed to open up talks about mental health in a fun and interactive way.",
-    role: "I was tasked with iterating on ideas and building a prototype that could be used to gather feedback",
+    description: "A platformer adventure game: hike, jump & Glide your way through a complex of floating islets and, as you explore, rescue little creatures made of clouds to harness their power.",
+    role: "I designed character abilities & their interactions with environment, and prototype them using Unreal 5 blueprints.",
     imageUrl: "/placeholder.svg"
   },
   {
-    title: "Innova58",
+    id: "project-alpha",
+    title: "Project Alpha",
     duration: "6 months",
     linkLabel: "Demo",
     linkUrl: "#",
-    description: "A digital twin project for an innovation area alongside a highway, i worked on during one of my internships. ",
-    role: "in a pair rebuild an older version of this project from scratch.",
+    description: "An innovative puzzle game combining strategy and action elements in a unique artistic environment.",
+    role: "Lead game designer responsible for core mechanics and level design.",
     imageUrl: "/placeholder.svg"
   }
 ];
@@ -50,7 +54,7 @@ export const ProjectsCarousel = () => {
   return (
     <section className="max-w-7xl mx-auto py-12">
       <h2 className="text-3xl font-semibold text-primary text-center mb-10">Projects</h2>
-
+      
       <Carousel
         opts={{
           align: "start",
@@ -59,9 +63,9 @@ export const ProjectsCarousel = () => {
         className="w-full px-12"
       >
         <CarouselContent className="-ml-4">
-          {projects.map((project, index) => (
-            <CarouselItem key={index} className="pl-4 basis-full md:basis-1/3">
-              <ProjectCard {...project} />
+          {projects.map((project) => (
+            <CarouselItem key={project.id} className="pl-4 basis-full md:basis-1/3">
+              <ProjectCard {...project} projectId={project.id} />
             </CarouselItem>
           ))}
         </CarouselContent>

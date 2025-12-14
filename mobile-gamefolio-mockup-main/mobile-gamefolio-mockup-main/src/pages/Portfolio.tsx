@@ -1,43 +1,69 @@
 import { Navigation } from "@/components/Navigation";
-import { Card } from "@/components/ui/card";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const projects = [
   {
-    id: 1,
-    title: "Project Alpha",
+    id: "riders-republic",
+    title: "Riders Republic",
     year: 2024,
-    description: "A strategic puzzle game combining tactical gameplay with narrative storytelling.",
+    description: "Riders Republic is an extreme sport MMO created by Ubisoft. Players can explore a huge open world with various sports and participate to race or tricks competitions with other players.",
     tasks: [
-      "Level Design & Balancing",
-      "Combat System Implementation",
-      "Player Progression Design",
+      "Multiplayer System Design",
+      "Live Service Features",
+      "Player Engagement Systems",
     ],
   },
   {
-    id: 2,
-    title: "Project Beta",
+    id: "judgeball",
+    title: "Judgeball: Lethal Arena",
     year: 2023,
-    description: "Multiplayer action game featuring fast-paced combat and team coordination.",
+    description: "A 3D online 3v3 sports and combat game, where players uses the power of their avatar to score goals and kills enemies.",
     tasks: [
-      "Multiplayer Game Modes",
+      "3Cs Design",
+      "Documentation",
+      "Unreal Blueprints Prototyping",
+    ],
+  },
+  {
+    id: "wandering-clouds",
+    title: "Wandering Clouds",
+    year: 2023,
+    description: "A platformer adventure game: hike, jump & Glide your way through a complex of floating islets and, as you explore, rescue little creatures made of clouds to harness their power.",
+    tasks: [
       "Character Ability Design",
-      "UI/UX Flow Implementation",
+      "Environment Interactions",
+      "Unreal 5 Blueprints",
     ],
   },
   {
-    id: 3,
-    title: "Project Gamma",
-    year: 2023,
-    description: "Open-world exploration game with dynamic weather and emergent gameplay.",
+    id: "project-alpha",
+    title: "Project Alpha",
+    year: 2022,
+    description: "An innovative puzzle game combining strategy and action elements in a unique artistic environment.",
     tasks: [
-      "World Building & Systems",
-      "Quest Design",
-      "Economy Balancing",
+      "Core Mechanics Design",
+      "Level Design",
+      "Game Balance",
     ],
   },
 ];
 
 const Portfolio = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const projectId = location.hash.slice(1);
+      const element = document.getElementById(projectId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -47,7 +73,8 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="space-y-6 animate-in fade-in-50 duration-700"
+              id={project.id}
+              className="space-y-6 animate-in fade-in-50 duration-700 scroll-mt-24"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Project Image Placeholder */}
