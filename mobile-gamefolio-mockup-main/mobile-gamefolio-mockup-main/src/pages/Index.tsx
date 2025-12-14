@@ -72,11 +72,9 @@ const Index = () => {
 
             <div className="max-w-2xl">
               <p className="text-muted-foreground leading-relaxed">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into
-                electronic
+                Hi, I’m Rainald. In 2023 (I know, pretty late), I discovered that I not only can play games but also make them for a living. Since then, I’ve poured lots of effort into joining studies and attending events to learn as much as I can about game development and everything connected to it.
+
+                My focus now lies in becoming a level designer and growing with the industry. I’m always looking for opportunities to broaden my horizon and improve myself through new experiences and people, so don’t be afraid to contact me if you have something to share.
               </p>
             </div>
           </div>
