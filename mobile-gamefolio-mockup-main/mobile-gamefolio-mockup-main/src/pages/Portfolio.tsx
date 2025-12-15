@@ -4,41 +4,41 @@ import { useLocation } from "react-router-dom";
 
 const projects = [
   {
-    id: "riders-republic",
-    title: "Riders Republic",
+    id: "scales-and-steel",
+    title: "Scales and Steel",
     year: 2024,
-    description: "Riders Republic is an extreme sport MMO created by Ubisoft. Players can explore a huge open world with various sports and participate to race or tricks competitions with other players.",
+    description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
     tasks: [
-      "Multiplayer System Design",
-      "Live Service Features",
-      "Player Engagement Systems",
+      "Character combat design: Prototyping movement mechanics",
+      "Level design: Layout for a tutorial in the first level",
+      "Building the final level and Boss fight",
     ],
   },
   {
-    id: "judgeball",
-    title: "Judgeball: Lethal Arena",
+    id: "rotp",
+    title: "Ripples of the past",
     year: 2023,
-    description: "A 3D online 3v3 sports and combat game, where players uses the power of their avatar to score goals and kills enemies.",
+    description: "A narrative choose your own adventure game that takes place in a mysterious village hidden in a forest.",
     tasks: [
-      "3Cs Design",
-      "Documentation",
+      "Creative direction: Coming up with solutions for making our game look good with limited art resources",
+      "Level design: Adding art assets provided by the art team to the level",
       "Unreal Blueprints Prototyping",
     ],
   },
   {
-    id: "wandering-clouds",
-    title: "Wandering Clouds",
+    id: "make-it",
+    title: "Make it...!",
     year: 2023,
-    description: "A platformer adventure game: hike, jump & Glide your way through a complex of floating islets and, as you explore, rescue little creatures made of clouds to harness their power.",
+    description: "A two-player tabletop game where each side tries to either deteriorate or preserve the mental state of the games persona. This game is aimed to open up talks about mental health in a fun and interactive way.",
     tasks: [
-      "Character Ability Design",
-      "Environment Interactions",
-      "Unreal 5 Blueprints",
+      "Building a paper prototype",
+      "Documenting information on the effects of life events on mental health",
+      "Contributing throughout the entire ideation process",
     ],
   },
   {
     id: "project-alpha",
-    title: "Project Alpha",
+    title: "Innova",
     year: 2022,
     description: "An innovative puzzle game combining strategy and action elements in a unique artistic environment.",
     tasks: [
@@ -67,7 +67,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="pt-24 pb-16 px-6 max-w-7xl mx-auto">
         <div className="space-y-16">
           {projects.map((project, index) => (
@@ -89,7 +89,7 @@ const Portfolio = () => {
                 <h2 className="text-2xl font-light">
                   {project.title} <span className="text-muted-foreground">({project.year})</span>
                 </h2>
-                
+
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>

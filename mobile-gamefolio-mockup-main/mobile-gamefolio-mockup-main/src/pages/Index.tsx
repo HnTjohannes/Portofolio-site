@@ -74,7 +74,7 @@ const Index = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Hi, I’m Rainald. In 2023 (I know, pretty late), I discovered that I not only can play games but also make them for a living. Since then, I’ve poured lots of effort into joining studies and attending events to learn as much as I can about game development and everything connected to it.
 
-                My focus now lies in becoming a level designer and growing with the industry. I’m always looking for opportunities to broaden my horizon and improve myself through new experiences and people, so don’t be afraid to contact me if you have something to share.
+                I'm a game designer focused on creating memorable experiences through level design and game mechanics.
               </p>
             </div>
           </div>

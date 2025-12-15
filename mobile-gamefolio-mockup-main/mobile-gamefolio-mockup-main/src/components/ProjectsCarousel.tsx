@@ -9,18 +9,18 @@ import { ProjectCard } from "./ProjectCard";
 
 const projects = [
   {
-    id: "riders-republic",
-    title: "Riders Republic",
+    id: "scales-and-steel",
+    title: "Scales and Steel",
     duration: "4 months",
     linkLabel: "Website",
     linkUrl: "#",
-    description: "Riders Republic is an extreme sport MMO created by Ubisoft. Players can explore a huge open world with various sports and participate to race or tricks competitions with other players.",
-    role: "I worked as a game designer intern: designing multiplayer oriented systems while the game was live.",
+    description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
+    role: "I designed character combat, boss encounters and some levels on this project.",
     imageUrl: "/placeholder.svg"
   },
   {
-    id: "judgeball",
-    title: "Judgeball: Lethal Arena",
+    id: "rotp",
+    title: "Ripples of the past",
     duration: "2 months",
     linkLabel: "Steam",
     linkUrl: "#",
@@ -29,8 +29,8 @@ const projects = [
     imageUrl: "/placeholder.svg"
   },
   {
-    id: "wandering-clouds",
-    title: "Wandering Clouds",
+    id: "make-it",
+    title: "Make it...!",
     duration: "9 months",
     linkLabel: "Student project",
     linkUrl: "#",
@@ -54,7 +54,7 @@ export const ProjectsCarousel = () => {
   return (
     <section className="max-w-7xl mx-auto py-12">
       <h2 className="text-3xl font-semibold text-primary text-center mb-10">Projects</h2>
-      
+
       <Carousel
         opts={{
           align: "start",

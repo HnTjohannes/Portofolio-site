@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="pt-24 pb-16 px-6 max-w-4xl mx-auto">
         <div className="space-y-12 animate-in fade-in-50 duration-700">
           {/* Header */}
@@ -42,13 +42,10 @@ const Contact = () => {
               <div className="space-y-4">
                 <h2 className="text-2xl font-light">Bio</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm a game designer with experience in creating engaging gameplay systems, 
-                  level design, and player experiences. With a background in both indie and 
-                  AAA development, I bring a unique perspective to every project.
+                  Hi I’m Rainald. in 2023  I discoverd that i not only can play games but also make them for a living. since then I’ve poured lot’s of effort to join the industry from following studdies and internships to attending events to learn as much as i can about game development and everything connected to it.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  My passion lies in crafting memorable moments that resonate with players 
-                  and push the boundaries of interactive entertainment.
+                  Now my focus lies in becoming a Level designer and creating memorable experiences for players, looking grow with the industry. I’m always looking for oppertunities to broaden my horizon and improve myself with new experiences and people, so don’t be afraid to contact me if you have something to share.
                 </p>
               </div>
 
@@ -68,21 +65,21 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="flex flex-col items-center gap-4">
-              <a 
-                href="mailto:hello@example.com" 
+              <a
+                href="mailto:isajohannes2077@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="h-5 w-5" />
-                <span>hello@example.com</span>
+                <span>isajohannes2077@gmail.com</span>
               </a>
-              <a 
-                href="https://linkedin.com/in/yourname" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/rainald-isabella-2544a2237/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
-                <span>John Designer</span>
+                <span>Rainald JP Isabella</span>
               </a>
             </div>
 
@@ -96,7 +93,7 @@ const Contact = () => {
                   className="bg-muted border-border"
                 />
               </div>
-              
+
               <div className="space-y-2">
                 <Input
                   type="email"
