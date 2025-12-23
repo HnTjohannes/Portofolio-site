@@ -6,46 +6,54 @@ const projects = [
   {
     id: "scales-and-steel",
     title: "Scales and Steel",
-    year: 2024,
+    year: 2025,
+    image: "/banner-sns.png",
     description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
     tasks: [
       "Character combat design: Prototyping movement mechanics",
       "Level design: Layout for a tutorial in the first level",
       "Building the final level and Boss fight",
     ],
+    tools: ["Godot", "GDScript", "GitHub", "Confluence"],
   },
   {
     id: "rotp",
     title: "Ripples of the past",
-    year: 2023,
+    year: 2024,
+    image: "/banner-rotp.png",
     description: "A narrative choose your own adventure game that takes place in a mysterious village hidden in a forest.",
     tasks: [
       "Creative direction: Coming up with solutions for making our game look good with limited art resources",
       "Level design: Adding art assets provided by the art team to the level",
       "Unreal Blueprints Prototyping",
     ],
+    tools: ["Godot", "GDScript", "GitHub", "Google docs"],
   },
   {
     id: "make-it",
     title: "Make it...!",
-    year: 2023,
+    year: 2024,
+    image: "/make-it.jpg",
     description: "A two-player tabletop game where each side tries to either deteriorate or preserve the mental state of the games persona. This game is aimed to open up talks about mental health in a fun and interactive way.",
     tasks: [
       "Building a paper prototype",
       "Documenting information on the effects of life events on mental health",
       "Contributing throughout the entire ideation process",
     ],
+    tools: ["Paper Prototyping"],
   },
   {
-    id: "project-alpha",
-    title: "Innova",
-    year: 2022,
-    description: "An innovative puzzle game combining strategy and action elements in a unique artistic environment.",
+    id: "innova",
+    title: "Innova58",
+    year: 2023,
+    image: "/banner-innova.png",
+    description: "A digital twin project for an innovation area alongside the A58 highway. this was my first formal unity project",
     tasks: [
       "Core Mechanics Design",
       "Level Design",
       "Game Balance",
     ],
+    tools: ["Unity", "C#", "Github", "Word"],
   },
 ];
 
@@ -77,11 +85,13 @@ const Portfolio = () => {
               className="space-y-6 animate-in fade-in-50 duration-700 scroll-mt-24"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Project Image Placeholder */}
+              {/* Project Image  */}
               <div className="w-full aspect-video bg-muted rounded-lg overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                  <span className="text-sm">Project Screenshot</span>
-                </div>
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Project Info */}
@@ -100,6 +110,17 @@ const Portfolio = () => {
                     {project.tasks.map((task, i) => (
                       <li key={i} className="text-sm text-muted-foreground">
                         {task}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-sm font-medium text-foreground">Software & Tools</h3>
+                  <ul className="list-disc list-inside space-y-1">
+                    {project.tools.map((tool, i) => (
+                      <li key={i} className="text-sm text-muted-foreground">
+                        {tool}
                       </li>
                     ))}
                   </ul>

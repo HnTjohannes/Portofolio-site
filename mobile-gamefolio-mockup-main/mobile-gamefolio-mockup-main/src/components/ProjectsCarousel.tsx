@@ -11,42 +11,42 @@ const projects = [
   {
     id: "scales-and-steel",
     title: "Scales and Steel",
-    duration: "4 months",
-    linkLabel: "Website",
+    duration: "5 months",
+    linkLabel: "Student project",
     linkUrl: "#",
-    description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
+    description: "An action platformer that takes place in a D&D inspired world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
     role: "I designed character combat, boss encounters and some levels on this project.",
-    imageUrl: "/placeholder.svg"
+    imageUrl: "/sns-game.png"
   },
   {
     id: "rotp",
     title: "Ripples of the past",
-    duration: "2 months",
-    linkLabel: "Steam",
-    linkUrl: "#",
-    description: "A 3D online 3v3 sports and combat game, where players uses the power of their avatar to score goals and kills enemies.",
-    role: "I worked on this project as a game design intern: 3Cs, documentation and prototyping using Unreal blueprints.",
-    imageUrl: "/placeholder.svg"
+    duration: "5 months",
+    linkLabel: "Student project",
+    linkUrl: "https://hntjohannes.itch.io/ripples-of-the-past",
+    description: "A narrative choose your own adventure game that takes place in a mysterious village hidden in a forest.",
+    role: "I started out as this games producer and later shifted focus to work on level design for the first level.",
+    imageUrl: "/rotp-game.png"
   },
   {
     id: "make-it",
     title: "Make it...!",
-    duration: "9 months",
-    linkLabel: "Student project",
-    linkUrl: "#",
-    description: "A platformer adventure game: hike, jump & Glide your way through a complex of floating islets and, as you explore, rescue little creatures made of clouds to harness their power.",
-    role: "I designed character abilities & their interactions with environment, and prototype them using Unreal 5 blueprints.",
-    imageUrl: "/placeholder.svg"
+    duration: "48 Hours",
+    linkLabel: "Gamejam",
+    linkUrl: "https://itch.io/jam/epic-we-01-hilversum/rate/2642862",
+    description: "A two player tabletop game where each side tries to either deteriorate or preserve the mental state of the game's persona.",
+    role: "I was tasked with iterating on ideas and building a prototype that could be used to gather feedback",
+    imageUrl: "/make-it.jpg"
   },
   {
-    id: "project-alpha",
-    title: "Project Alpha",
+    id: "innova",
+    title: "Innova58",
     duration: "6 months",
-    linkLabel: "Demo",
+    linkLabel: "Internship",
     linkUrl: "#",
-    description: "An innovative puzzle game combining strategy and action elements in a unique artistic environment.",
-    role: "Lead game designer responsible for core mechanics and level design.",
-    imageUrl: "/placeholder.svg"
+    description: "A digital twin project for an innovation area alongside a highway.",
+    role: "Making project plans with stakeholders and co-developing the simulation.",
+    imageUrl: "/innova-game.png"
   }
 ];
 

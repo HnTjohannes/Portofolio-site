@@ -26,7 +26,7 @@ const Contact = () => {
           <div className="text-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-light">About Me</h1>
             <p className="text-muted-foreground">
-              Game designer passionate about creating immersive experiences
+              Game designer passionate about creating immersive worlds and experiences
             </p>
           </div>
 
@@ -42,10 +42,10 @@ const Contact = () => {
               <div className="space-y-4">
                 <h2 className="text-2xl font-light">Bio</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Hi I’m Rainald. in 2023  I discoverd that i not only can play games but also make them for a living. since then I’ve poured lot’s of effort to join the industry from following studdies and internships to attending events to learn as much as i can about game development and everything connected to it.
+                  Hi I’m Rainald. in 2023  I discoverd that i not only can play games but also make them for a living. since then I have poured a lot of effort to join the industry from following studdies and internships to attending events to learn as much as i can about game development and everything connected to it.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Now my focus lies in becoming a Level designer and creating memorable experiences for players, looking grow with the industry. I’m always looking for oppertunities to broaden my horizon and improve myself with new experiences and people, so don’t be afraid to contact me if you have something to share.
+                  Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players, looking grow with the industry. I am always looking for jobs / oppertunities to broaden my horizon and improve myself with new experiences and people, so don’t be afraid to contact me if you have something to share.
                 </p>
               </div>
 
