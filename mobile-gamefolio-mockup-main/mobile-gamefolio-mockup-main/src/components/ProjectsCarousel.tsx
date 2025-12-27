@@ -53,7 +53,12 @@ const projects = [
 export const ProjectsCarousel = () => {
   return (
     <section className="max-w-7xl mx-auto py-12">
-      <h2 className="text-3xl font-semibold text-primary text-center mb-10">Projects</h2>
+      <h2 className="text-3xl font-semibold text-primary text-center mb-2">
+        Featured Projects
+      </h2>
+      <p className="text-muted-foreground text-center mb-10">
+        Explore my work in game design and interactive experiences
+      </p>
 
       <Carousel
         opts={{
@@ -69,8 +74,8 @@ export const ProjectsCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0 text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
-        <CarouselNext className="right-0 text-primary border-primary hover:bg-primary hover:text-primary-foreground" />
+        <CarouselPrevious className="left-0 text-primary border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,200,50,0.5)] hover:scale-110" />
+        <CarouselNext className="right-0 text-primary border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,200,50,0.5)] hover:scale-110" />
       </Carousel>
     </section>
   );

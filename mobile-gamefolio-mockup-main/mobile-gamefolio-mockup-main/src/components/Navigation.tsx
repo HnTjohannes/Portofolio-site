@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,19 +24,22 @@ export const Navigation = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               className={cn(
-                "text-sm font-light tracking-wide transition-colors hover:text-primary",
-                location.pathname === link.to ? "text-primary" : "text-muted-foreground"
+                "text-sm font-light tracking-wide transition-all duration-300 hover:text-primary relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+                location.pathname === link.to
+                  ? "text-primary after:w-full"
+                  : "text-muted-foreground"
               )}
             >
               {link.label}
             </Link>
           ))}
+          <ThemeToggle />
         </div>
 
         {/* Mobile Menu Button */}

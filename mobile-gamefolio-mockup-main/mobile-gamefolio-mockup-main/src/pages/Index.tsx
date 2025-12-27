@@ -46,7 +46,7 @@ const Index = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                Any Kind any Time
+                ~ Also I can code
               </p>
             </div>
 
@@ -68,13 +68,11 @@ const Index = () => {
         {/* About Section */}
         <section className="max-w-7xl mx-auto py-16">
           <div className="space-y-6 animate-in fade-in-50 duration-700 delay-300">
-            <h2 className="text-2xl font-light">about</h2>
+            <h2 className="text-2xl font-light">Rainald JP Isabella</h2>
 
             <div className="max-w-2xl">
               <p className="text-muted-foreground leading-relaxed">
-                Hi, I’m Rainald. In 2023 (I know, pretty late), I discovered that I not only can play games but also make them for a living. Since then, I’ve poured lots of effort into joining studies and attending events to learn as much as I can about game development and everything connected to it.
-
-                I'm a game designer focused on creating memorable experiences through level design and game mechanics.
+                I'm a game developer focused on design specializing mainly in levels and systems. I also have experience in programming and am always looking to learn from others as the community is one of the strongest parts of the gaming industry.
               </p>
             </div>
           </div>
@@ -86,7 +84,7 @@ const Index = () => {
         {/* View Portfolio Button */}
         <section className="max-w-7xl mx-auto pb-16">
           <div className="flex justify-center">
-            <Button asChild size="lg" className="rounded-full font-semibold text-lg px-8 py-6 hover-scale shadow-lg border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button asChild variant="outline" size="lg" className="rounded-full font-semibold text-lg px-8 py-6">
               <Link to="/portfolio">View all projects</Link>
             </Button>
           </div>

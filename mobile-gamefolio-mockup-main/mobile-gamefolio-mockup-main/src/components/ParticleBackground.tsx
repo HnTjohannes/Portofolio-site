@@ -14,7 +14,7 @@ export const ParticleBackground = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const newParticles = Array.from({ length: 50 }, (_, i) => ({
+    const newParticles = Array.from({ length: 40 }, (_, i) => ({
       id: i,
       size: Math.random() * 4 + 2,
       left: Math.random() * 100,
@@ -24,13 +24,16 @@ export const ParticleBackground = () => {
     }));
     setParticles(newParticles);
   }, []);
+  const getParticleColor = (id: number) => {
+    return id % 3 === 0 ? 'bg-white' : 'bg-primary';
+  };
 
   return (
     <ParallaxSection speed={0.3} className="absolute inset-0 overflow-hidden pointer-events-none">
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="absolute rounded-full bg-primary/20 animate-float"
+          className={'absolute rounded-full ' + getParticleColor(particle.id) + ' animate-float'}
           style={{
             width: `${particle.size}px`,
             height: `${particle.size}px`,
@@ -39,6 +42,9 @@ export const ParticleBackground = () => {
             opacity: particle.opacity,
             animationDelay: `${particle.delay}s`,
             animationDuration: `${particle.duration}s`,
+            boxShadow: particle.id % 3 === 0
+              ? '0 0 6px rgba(255, 255, 255, 0.6)'
+              : '0 0 8px rgba(255, 200, 50, 0.5)',
           }}
         />
       ))}

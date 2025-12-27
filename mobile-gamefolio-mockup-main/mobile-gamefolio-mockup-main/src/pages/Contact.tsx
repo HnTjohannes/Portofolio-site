@@ -4,16 +4,49 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Linkedin, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdMSmBLjvd0KEC6QPmuWjoRlkmh0I81pKp8xyxPxkfkm8XO9A/formResponse";
+const ENTRY_NAME = "entry.615725663";
+const ENTRY_EMAIL = "entry.837152990";
+const ENTRY_MESSAGE = "entry.842332849";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "I'll get back to you as soon as possible.",
-    });
+    setIsSubmitting(true);
+
+    const formBody = new URLSearchParams();
+    formBody.append(ENTRY_NAME, formData.name);
+    formBody.append(ENTRY_EMAIL, formData.email);
+    formBody.append(ENTRY_MESSAGE, formData.message);
+
+    try {
+      await fetch(GOOGLE_FORM_ACTION_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody.toString(),
+      });
+
+      toast({
+        title: "Message sent!",
+        description: "I'll get back to you as soon as possible.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -33,8 +66,12 @@ const Contact = () => {
           {/* Bio Section */}
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Photo */}
-            <div className="aspect-square bg-muted rounded-lg flex items-center justify-center border border-border">
-              <span className="text-muted-foreground text-sm">Your Photo</span>
+            <div className="aspect-square bg-muted rounded-lg overflow-hidden border border-border">
+              <img
+                src="/headshot.jpg"
+                alt="Profile photo"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Bio Text & Resume */}
@@ -42,16 +79,16 @@ const Contact = () => {
               <div className="space-y-4">
                 <h2 className="text-2xl font-light">Bio</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Hi I’m Rainald. in 2023  I discoverd that i not only can play games but also make them for a living. since then I have poured a lot of effort to join the industry from following studdies and internships to attending events to learn as much as i can about game development and everything connected to it.
+                  Hi I’m Rainald. in 2023  I discoverd that I not only can play games but also make them. since then I worked non-stop to join the industry from building projects, to following studdies and internships and even attend events to learn as much as I can about game development and everything connected to it.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players, looking grow with the industry. I am always looking for jobs / oppertunities to broaden my horizon and improve myself with new experiences and people, so don’t be afraid to contact me if you have something to share.
+                  Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players looking to grow with the industry. I am always looking for jobs / oppertunities to broaden my horizon and improve myself with new experiences and people.  Contact me if you have some questions or want to chat.
                 </p>
               </div>
 
               {/* Resume Download */}
               <Button variant="outline" className="w-full gap-2" asChild>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/resume-gold.pdf" target="_blank" rel="noopener noreferrer">
                   <FileText className="h-4 w-4" />
                   Download Resume
                 </a>
@@ -90,6 +127,8 @@ const Contact = () => {
                   type="text"
                   placeholder="Your Name"
                   required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="bg-muted border-border"
                 />
               </div>
@@ -99,6 +138,8 @@ const Contact = () => {
                   type="email"
                   placeholder="Your Email"
                   required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="bg-muted border-border"
                 />
               </div>
@@ -107,13 +148,15 @@ const Contact = () => {
                 <Textarea
                   placeholder="Your Message"
                   required
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={6}
                   className="bg-muted border-border resize-none"
                 />
               </div>
 
-              <Button type="submit" className="w-full">
-                Send Message
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>

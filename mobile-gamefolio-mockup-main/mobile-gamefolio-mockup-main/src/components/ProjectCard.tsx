@@ -35,7 +35,7 @@ export const ProjectCard = ({
   return (
     <div
       onClick={handleClick}
-      className="bg-secondary/80 rounded-2xl overflow-hidden text-white h-full flex flex-col border border-border/30 shadow-lg shadow-black/10 transition-transform duration-200 hover:scale-95 cursor-pointer"
+      className="bg-secondary/80 rounded-2xl overflow-hidden text-foreground h-full flex flex-col border border-border/30 shadow-lg shadow-black/10 transition-all duration-300 hover:scale-[0.97] hover:shadow-[0_0_25px_rgba(255,200,50,0.2)] hover:border-primary/50 cursor-pointer group"
     >
       {/* Image Preview */}
       <div className="relative aspect-video">
@@ -48,17 +48,17 @@ export const ProjectCard = ({
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-xl font-semibold text-center mb-3">{title}</h3>
-
+        <h3 className="text-xl font-semibold text-center mb-3 text-primary group-hover:text-accent transition-colors duration-300">{title}</h3>
         {/* Tags */}
         <div className="flex justify-center gap-2 mb-4">
-          <span className="inline-flex items-center gap-1.5 bg-primary-foreground/20 px-3 py-1 rounded-full text-sm">
+          <span className="inline-flex items-center gap-1.5 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full text-sm text-primary">
             <Clock className="w-3.5 h-3.5" />
             {duration}
           </span>
           <a
             href={linkUrl}
-            className="inline-flex items-center gap-1.5 bg-primary-foreground/20 px-3 py-1 rounded-full text-sm hover:bg-primary-foreground/30 transition-colors"
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center gap-1.5 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full text-sm text-primary hover:bg-primary/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(255,200,50,0.3)]"
           >
             <LinkIcon className="w-3.5 h-3.5" />
             {linkLabel}
@@ -66,15 +66,15 @@ export const ProjectCard = ({
         </div>
 
         {/* Description */}
-        <p className="text-sm text-center text-[#EBEBEB] mb-3 flex-1">
+        <p className="text-sm text-center text-muted-foreground mb-3 flex-1">
           {description}
         </p>
 
-        <p className="text-sm text-center text-[#EBEBEB]">
+        <p className="text-sm text-center text-muted-foreground/80">
           {role}
         </p>
 
-        <p className="text-sm text-center text-[#EBEBEB] mt-3 cursor-pointer hover:text-primary-foreground transition-colors">
+        <p className="text-sm text-center text-primary/70 mt-3 group-hover:text-primary transition-colors duration-300">
           Click to view more
         </p>
       </div>
