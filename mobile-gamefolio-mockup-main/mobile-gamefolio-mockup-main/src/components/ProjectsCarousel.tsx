@@ -32,7 +32,7 @@ const projects = [
     id: "make-it",
     title: "Make it...!",
     duration: "48 Hours",
-    linkLabel: "Gamejam",
+    linkLabel: "Gamejam - Winner",
     linkUrl: "https://itch.io/jam/epic-we-01-hilversum/rate/2642862",
     description: "A two player tabletop game where each side tries to either deteriorate or preserve the mental state of the game's persona.",
     role: "I was tasked with iterating on ideas and building a prototype that could be used to gather feedback",

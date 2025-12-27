@@ -72,7 +72,7 @@ const Index = () => {
 
             <div className="max-w-2xl">
               <p className="text-muted-foreground leading-relaxed">
-                I'm a game developer focused on design specializing mainly in levels and systems. I also have experience in programming and am always looking to learn from others as the community is one of the strongest parts of the gaming industry.
+                I'm a game developer focused on design specializing mainly in levels and systems, while also have experience in programming. I am always looking to learn more and connect with others as the community is one of the strongest parts of the gaming industry.
               </p>
             </div>
           </div>
