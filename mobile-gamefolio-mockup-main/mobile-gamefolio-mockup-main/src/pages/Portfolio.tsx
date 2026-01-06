@@ -10,7 +10,7 @@ const projects = [
     image: "/banner-sns.png",
     description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
     tasks: [
-      "Building a quick and dirty prototype for character locomotion fully with combat and a variety of movement options.",
+      "Made a Minimal valuable product(MVP) for the Character Actions in 2 weeks this included all movement options and basic combat.",
       "Designing and building an interchangable special ability system allowing for combining diffrent skills so player's can create their own playstyle.",
       "Making a tutorial level that quickly shows the basics of the game.",
       "Building the first Boss encounter with the goal to test the player.",
@@ -28,7 +28,7 @@ const projects = [
       "Collecting our teams skills and experiences to come up with a vision for the game that looks good but is also possible to make with limited resources.",
       "Discussing the flow of the game and how we were gonna communicate our story.",
       "Set dressing for the first world using assets provided by the art team, visual programming and tools provided by the engine for lighting.",
-      "Performing QA runs and fixed issues with the level i came across. other problems were documented and fixed by the designated team.",
+      "Playing through the level and fixed non-programming issues i came across. other problems were documented and fixed by the designated team.",
       "Making the ingame menu UI functional and later improving it visually with the art team.",
     ],
     tools: ["Godot", "GDScript", "GitHub", "Google docs", "Trello"],

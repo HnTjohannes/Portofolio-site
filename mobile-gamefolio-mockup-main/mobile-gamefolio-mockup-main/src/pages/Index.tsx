@@ -36,7 +36,11 @@ const Index = () => {
           <ParticleBackground />
           <div className="grid md:grid-cols-2 gap-12 items-center animate-in fade-in-50 duration-1000 relative z-10">
             <div className="space-y-8">
+
               <div className="space-y-2">
+                <p className="text-muted-foreground/60 text-xl md:text-2xl font-light">
+                  Junior
+                </p>
                 <h1 className={`text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight transition-all duration-300 ${isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}>
                   {words[currentWord]}
                 </h1>
@@ -48,6 +52,14 @@ const Index = () => {
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
                 ~ Also I can code
               </p>
+              <div className="space-y-1 pt-4">
+                <p className="text-muted-foreground/60 text-sm font-light">
+                  Unity, Unreal etc.
+                </p>
+                <p className="text-muted-foreground/60 text-sm font-light">
+                  C#, Blueprint, GDscript, and more
+                </p>
+              </div>
             </div>
 
             <div className="aspect-square w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden shadow-2xl border border-border/20">
@@ -72,9 +84,27 @@ const Index = () => {
 
             <div className="max-w-2xl">
               <p className="text-muted-foreground leading-relaxed">
-                I'm a game developer focused on design specializing mainly in levels and systems, while also have experience in programming. I am always looking to learn more and connect with others as the community is one of the strongest parts of the gaming industry.
+                I'm a <b>Junior Game Developer</b> focused on design specializing mainly in levels and systems, while also have experience in programming. <b>I am always looking to learn</b> and connect with others as the community is one of the strongest parts of the gaming industry.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Referrals Section */}
+        <section className="max-w-7xl mx-auto py-16 space-y-8">
+          <div className="space-y-6">
+            <p className="text-xl md:text-2xl font-light">
+              Referrals
+            </p>
+            <blockquote className="space-y-2">
+              <p className="text-muted-foreground leading-relaxed">
+                " Rainald is a surprisingly skilled and versatile junior developer. Fresh out of school, he picks up new technologies
+                and languages with enthusiasm and integrates effortlessly into any team."
+              </p>
+              <footer className="text-muted-foreground/70 text-right text-sm">
+                Peter Kortenhoeven CEO The nXT Fit | PWXR
+              </footer>
+            </blockquote>
           </div>
         </section>
 
