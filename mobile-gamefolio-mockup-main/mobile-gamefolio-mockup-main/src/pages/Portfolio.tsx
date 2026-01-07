@@ -7,6 +7,7 @@ const projects = [
     id: "scales-and-steel",
     title: "Scales and Steel",
     year: 2025,
+    video: "https://youtu.be/JMQKgw2Rl-c",
     image: "/banner-sns.png",
     description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
     tasks: [
@@ -22,6 +23,7 @@ const projects = [
     id: "rotp",
     title: "Ripples of the past",
     year: 2024,
+    video: "https://youtu.be/044_N3n6Waw",
     image: "/banner-rotp.png",
     description: "A narrative choose your own adventure game that takes place in a mysterious village hidden in a forest.",
     tasks: [
@@ -91,11 +93,29 @@ const Portfolio = () => {
             >
               {/* Project Image  */}
               <div className="w-full aspect-video bg-muted rounded-lg overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={`${project.title} screenshot`}
-                  className="w-full h-full object-cover"
-                />
+                {project.video ? (
+                  project.video.includes('youtube.com') || project.video.includes('youtu.be') ? (
+                    <iframe
+                      src={project.video.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) :
+                    <video
+                      src={project.video}
+                      className="w-full h-full object-cover"
+                      controls
+                      muted
+                      loop
+                    />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
 
               {/* Project Info */}

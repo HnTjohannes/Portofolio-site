@@ -70,7 +70,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="aspect-square w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden shadow-2xl border border-border/20">
+            <div className="aspect-video w-full max-w-2xl mx-auto md:mx-0 rounded-lg overflow-hidden shadow-2xl border border-border/20">
               <video
                 className="w-full h-full object-cover"
                 autoPlay
@@ -78,7 +78,7 @@ const Index = () => {
                 muted
                 playsInline
               >
-                <source src="/placeholder-video.mp4" type="video/mp4" />
+                <source src="/highlight.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
