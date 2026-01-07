@@ -5,6 +5,7 @@ import { ProjectsCarousel } from "@/components/ProjectsCarousel";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Github } from "lucide-react";
 
 const Index = () => {
   const [currentWord, setCurrentWord] = useState(0);
@@ -50,7 +51,14 @@ const Index = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                ~ Also I can code
+                ~ Also I can code <a
+                  href="https://github.com/HnTjohannes/Coding-Adventures/tree/Trolley-problem"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-muted-foreground/60 hover:text-foreground transition-colors"
+                >
+                  <Github size={20} />
+                </a>
               </p>
               <div className="space-y-1 pt-4">
                 <p className="text-muted-foreground/60 text-sm font-light">
