@@ -79,10 +79,10 @@ const Contact = () => {
               <div className="space-y-4">
                 <h2 className="text-2xl font-light">Bio</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Hi I’m Rainald. in 2023  I discoverd that I not only can play games but also make them. since then I worked non-stop to enter the industry from building projects, to following studdies and internships and even attend events to learn as much as I can about game development and everything connected to it.
+                  Hi, I’m Rainald. In 2023, I realized that I didn't just want to play games—I wanted to build them. Since then, I have dedicated myself to entering the industry by building personal projects, pursuing formal studies, completing internships, and attending industry events.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players looking to grow with the industry. I am always looking for jobs / oppertunities to broaden my horizon and improve myself with new experiences and people.  Contact me if you have some questions or want to chat.
+                  Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players looking to grow with the industry. <b>I am always looking for jobs / oppertunities </b> to broaden my horizon and improve myself with new experiences and people.  Contact me if you have some questions or want to chat.
                 </p>
               </div>
 

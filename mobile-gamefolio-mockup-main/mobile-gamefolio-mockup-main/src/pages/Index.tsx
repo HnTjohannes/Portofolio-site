@@ -92,7 +92,7 @@ const Index = () => {
 
             <div className="max-w-2xl">
               <p className="text-muted-foreground leading-relaxed">
-                I'm a <b>Junior Game Developer</b> focused on design specializing mainly in levels and systems, while also have experience in programming. <b>I am always looking to learn</b> and connect with others as the community is one of the strongest parts of the gaming industry.
+                " I'm a <b>Junior Game Developer</b> focused on design while having practical programming experience. My focus lies in levels and systems. I thrive on collaboration and am actively looking to connect with peers in the industry to <b>learn and grow</b> together."
               </p>
             </div>
           </div>
