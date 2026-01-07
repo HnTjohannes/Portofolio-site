@@ -110,7 +110,7 @@ const Index = () => {
                 and languages with enthusiasm and integrates effortlessly into any team."
               </p>
               <footer className="text-muted-foreground/70 text-right text-sm">
-                Peter Kortenhoeven CEO The nXT Fit | PWXR
+                Peter Kortenhoeven CEO The NXT Fit | PWXR
               </footer>
             </blockquote>
           </div>
