@@ -7,7 +7,7 @@ const projects = [
     id: "scales-and-steel",
     title: "Scales and Steel",
     year: 2025,
-    video: "https://youtu.be/JMQKgw2Rl-c",
+    video: "https://youtu.be/nBzsjPspaAo",
     image: "/banner-sns.png",
     description: "An action platformer that takes place in a D&D style world where you play as a dragon who has been turned into a knight and has to take it up against a wizard to reclaim his body.",
     tasks: [
