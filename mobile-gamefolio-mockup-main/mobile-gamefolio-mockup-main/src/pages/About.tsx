@@ -5,9 +5,9 @@ import { FileText, Briefcase, GraduationCap, Heart, Code, Gamepad2, Palette, Mus
 import profilePlaceholder from "/public/headshot.jpg";
 
 const skills = [
-    { category: "Design", items: ["Level Design", "Game Systems", "UI/UX", "Narrative Design"] },
-    { category: "Tools", items: ["Unity", "Unreal Engine", "Figma", "Photoshop"] },
-    { category: "Programming", items: ["C#", "C++", "Blueprint", "Python"] },
+    { category: "Design", items: ["Level Design", "Gameplay Systems", "Boss Design", "Encounter Design"] },
+    { category: "Tools", items: ["Unity | Godot | Unreal Engine", "Figma", "Notion"] },
+    { category: "Programming", items: ["C#", "Blueprint", "GDScript"] },
 ];
 
 const experience = [
@@ -50,7 +50,7 @@ const About = () => {
                             <img
                                 src={profilePlaceholder}
                                 alt="Profile photo"
-                                className="w-full h-full object-cover"
+                                className="w-full/20 h-full object-cover"
                             />
                         </div>
 
@@ -59,24 +59,20 @@ const About = () => {
                             <div className="space-y-4">
                                 <h2 className="text-2xl font-light">Bio</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    I'm a game designer with experience in creating engaging gameplay systems,
-                                    level design, and player experiences. With a background in both indie and
-                                    AAA development, I bring a unique perspective to every project.
+                                    Hi, I’m Rainald. In 2023, I realized that I didn't just want to play games—I wanted to build them. Since then, I have dedicated myself to entering the industry by building personal projects, pursuing formal studies, completing internships, and attending industry events.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    My passion lies in crafting memorable moments that resonate with players
-                                    and push the boundaries of interactive entertainment.
+                                    Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players looking to grow with the industry. <b>I am always looking for jobs / oppertunities </b> to broaden my horizon and improve myself with new experiences and people.  Contact me if you have some questions or want to chat.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    When I'm not designing games, you can find me exploring new technologies,
-                                    playing the latest releases, or collaborating with other creatives on
-                                    experimental projects.
+                                    When I'm not working on games, you can find me practicing other creative skills,
+                                    playing through my backlog, or going on random side quests with friends.
                                 </p>
                             </div>
 
                             {/* Resume Download */}
                             <Button variant="outline" className="gap-2" asChild>
-                                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                                <a href="/resumeCV.pdf" target="_blank" rel="noopener noreferrer">
                                     <FileText className="h-4 w-4" />
                                     Download Resume
                                 </a>

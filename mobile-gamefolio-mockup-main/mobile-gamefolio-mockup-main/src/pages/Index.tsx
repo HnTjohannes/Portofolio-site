@@ -30,7 +30,7 @@ const Index = () => {
 
       <main className="pt-16 pb-16 px-6">
         {/* Hero Section */}
-        <section className="min-h-[70vh] flex flex-col justify-center max-w-7xl mx-auto relative overflow-hidden">
+        <section className="min-h-[70vh] flex flex-col justify-center max-w-7xl mx-auto relative overflow-visible">
           <ParallaxSection speed={0.5} className="absolute inset-0 -z-10">
             <div style={{ background: 'var(--gradient-hero)', height: '100%', width: '100%' }} />
           </ParallaxSection>
@@ -49,9 +49,9 @@ const Index = () => {
             {/* Left Content */}
             <div className="space-y-10">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm text-primary/80 font-medium tracking-wide">Available for Work</span>
+              <div className="inline-flex items-center gap-2 px-4 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+
+                <span className="text-sm text-primary/80 font-medium tracking-wide">Junior</span>
               </div>
 
               {/* Main Title */}
@@ -73,13 +73,10 @@ const Index = () => {
               {/* Tagline */}
               <div className="space-y-3">
                 <p className="text-2xl md:text-3xl text-muted-foreground font-light italic">
-                  ~ Also I can code
+                  ~ Also I'm an experienced programmer
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="h-px w-16 bg-primary/40" />
-                  <p className="text-muted-foreground/70 text-sm tracking-widest uppercase">
-                    Crafting Digital Experiences
-                  </p>
                 </div>
               </div>
 
@@ -87,16 +84,16 @@ const Index = () => {
               <div className="flex flex-wrap gap-3 pt-4">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
                   <Gamepad2 className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-muted-foreground">Unity & Unreal</span>
+                  <span className="text-sm text-muted-foreground">Unity, Godot, Unreal</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
                   <Code2 className="w-4 h-4 text-primary" />
-                  <span className="text-sm text-muted-foreground">C++ & Java</span>
+                  <span className="text-sm text-muted-foreground">C#, GDscript, Blueprint</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+                {/*<div className="flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
                   <Layers className="w-4 h-4 text-primary" />
                   <span className="text-sm text-muted-foreground">Systems Design</span>
-                </div>
+                </div>*/}
               </div>
 
               {/* CTA & Social */}
@@ -108,7 +105,7 @@ const Index = () => {
                   </Link>
                 </Button>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/HnTjohannes/Coding-Adventures/tree/Boids-GDscript"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full border border-border hover:border-primary hover:bg-primary/10 transition-all group"
@@ -118,10 +115,10 @@ const Index = () => {
               </div>
             </div>
             {/* Right Content - Video with Frame */}
-            <div className="relative">
+            <div className="relative overflow-visible mr-8">
               {/* Decorative Frame */}
-              <div className="absolute -inset-4 border border-primary/20 rounded-2xl -rotate-2" />
-              <div className="absolute -inset-8 border border-primary/10 rounded-3xl rotate-1" />
+              <div className="absolute -inset-4 border border-primary/20 rounded-2xl -rotate-2 pointer-events-none" />
+              <div className="absolute -inset-6 border border-primary/10 rounded-3xl rotate-1 pointer-events-none" />
 
               {/* Floating Label */}
               <div className="absolute -top-6 left-8 px-4 py-2 bg-card border border-border rounded-full z-10">
@@ -150,7 +147,7 @@ const Index = () => {
                 </div>
                 <div className="w-px bg-border" />
                 <div className="text-center">
-                  <p className="text-lg font-bold text-primary">5+</p>
+                  <p className="text-lg font-bold text-primary">7+</p>
                   <p className="text-xs text-muted-foreground">Projects</p>
                 </div>
               </div>
@@ -171,7 +168,7 @@ const Index = () => {
 
             <div className="max-w-2xl">
               <p className="text-muted-foreground leading-relaxed">
-                " I'm a <b>Junior Game Developer</b> focused on design while having practical programming experience. My focus lies in levels and systems. I thrive on collaboration and am actively looking to connect with peers in the industry to <b>learn and grow</b> together."
+                "I'm a <b>Junior Game Developer</b> focused on design while having practical programming experience, specializing in levels and systems. I thrive on collaboration and am actively looking to connect with peers in the industry to <b>learn and grow</b> together."
               </p>
             </div>
           </div>
@@ -181,15 +178,15 @@ const Index = () => {
         <section className="max-w-7xl mx-auto py-16 space-y-8">
           <div className="space-y-6">
             <p className="text-xl md:text-2xl font-light">
-              Referrals
+              Testimonials
             </p>
             <blockquote className="space-y-2">
               <p className="text-muted-foreground leading-relaxed">
-                " Rainald is a surprisingly skilled and versatile junior developer. Fresh out of school, he picks up new technologies
+                "Rainald is a surprisingly skilled and versatile junior developer. Fresh out of school, he picks up new technologies
                 and languages with enthusiasm and integrates effortlessly into any team."
               </p>
               <footer className="text-muted-foreground/70 text-right text-sm">
-                Peter Kortenhoeven CEO The NXT Fit | PWXR
+                <a href="https://www.linkedin.com/in/peterkortenhoeven/">Peter Kortenhoeven</a> CEO The NXT Fit | PWXR
               </footer>
             </blockquote>
           </div>

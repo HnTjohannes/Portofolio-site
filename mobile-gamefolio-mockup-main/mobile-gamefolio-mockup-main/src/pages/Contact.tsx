@@ -63,38 +63,6 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* Bio Section */}
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Photo */}
-            <div className="aspect-square bg-muted rounded-lg overflow-hidden border border-border">
-              <img
-                src="/headshot.jpg"
-                alt="Profile photo"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Bio Text & Resume */}
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-light">Bio</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Hi, I’m Rainald. In 2023, I realized that I didn't just want to play games—I wanted to build them. Since then, I have dedicated myself to entering the industry by building personal projects, pursuing formal studies, completing internships, and attending industry events.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Now my focus lies in improving my skills as a Level designer and creating memorable experiences for players looking to grow with the industry. <b>I am always looking for jobs / oppertunities </b> to broaden my horizon and improve myself with new experiences and people.  Contact me if you have some questions or want to chat.
-                </p>
-              </div>
-
-              {/* Resume Download */}
-              <Button variant="outline" className="w-full gap-2" asChild>
-                <a href="/resume-gold.pdf" target="_blank" rel="noopener noreferrer">
-                  <FileText className="h-4 w-4" />
-                  Download Resume
-                </a>
-              </Button>
-            </div>
-          </div>
 
           {/* Contact Section */}
           <div className="space-y-8 pt-8 border-t border-border">

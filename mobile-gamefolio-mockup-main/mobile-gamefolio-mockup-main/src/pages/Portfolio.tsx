@@ -87,8 +87,7 @@ const Portfolio = () => {
         <div className="text-center space-y-4 mb-16 animate-in fade-in-50 duration-700">
           <h1 className="text-4xl md:text-5xl font-light">Portfolio</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A collection of my game design work, featuring projects from indie games to AAA titles.
-            Each project showcases different aspects of my design philosophy and technical skills.
+            A collection featuring past projects I've completed. From these my biggest succes was Make-it...!, which won the EPIC-WE Game Jam at <b>Netherlands Institute for Sound and Vision.</b> But I can say that I got a lot of joy and experience from working on all of them.
           </p>
         </div>
         <div className="space-y-16">
