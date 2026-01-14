@@ -182,11 +182,19 @@ const Index = () => {
             </p>
             <blockquote className="space-y-2">
               <p className="text-muted-foreground leading-relaxed">
+                "Rainald is passionate about game development, reliable, talented and overall a great guy. He is an asset for any team. I enjoyed working with him in the GameLab."
+              </p>
+              <footer className="text-muted-foreground/70 text-right text-sm">
+                <a href="https://www.linkedin.com/in/jeroenderwort/"><b>Jeroen Derwort</b></a> GameLab Manager | Chairman Dutch Games Association
+              </footer>
+            </blockquote>
+            <blockquote className="space-y-2">
+              <p className="text-muted-foreground leading-relaxed">
                 "Rainald is a surprisingly skilled and versatile junior developer. Fresh out of school, he picks up new technologies
                 and languages with enthusiasm and integrates effortlessly into any team."
               </p>
               <footer className="text-muted-foreground/70 text-right text-sm">
-                <a href="https://www.linkedin.com/in/peterkortenhoeven/">Peter Kortenhoeven</a> CEO The NXT Fit | PWXR
+                <a href="https://www.linkedin.com/in/peterkortenhoeven/"><b>Peter Kortenhoeven</b></a> CEO The NXT Fit | PWXR
               </footer>
             </blockquote>
           </div>
