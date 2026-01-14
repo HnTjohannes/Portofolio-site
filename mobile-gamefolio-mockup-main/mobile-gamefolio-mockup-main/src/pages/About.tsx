@@ -11,21 +11,20 @@ const skills = [
 ];
 
 const experience = [
-    { year: "2023 - Present", role: "Senior Game Designer", company: "Studio Name", description: "Leading design on AAA title" },
-    { year: "2021 - 2023", role: "Game Designer", company: "Indie Studio", description: "Designed gameplay systems and levels" },
-    { year: "2019 - 2021", role: "Junior Designer", company: "Game Company", description: "Assisted with level design and QA" },
+    { year: "2025 - Present", role: "Game Designer", company: "PWXR", description: "Internship prototyping a mobile extension for a VR title" },
+    { year: "2024 - 2025", role: "Lab assistant", company: "Gamelab (THUAS)", description: "Maintenance of gaming hardware and a student game" },
+    { year: "2024 - 2024", role: "Unity Developer", company: "Gamelab (THUAS)", description: "Internship building a digital twin" },
 ];
 
 const education = [
-    { year: "2019", degree: "Bachelor's in Game Design", institution: "University Name" },
-    { year: "2017", degree: "Certificate in 3D Modeling", institution: "Art Institute" },
+    { year: "2025 (expected)", degree: "Bachelor's in Game Design", institution: "The Hague University of Applied Sciences" },
+
 ];
 
 const interests = [
-    { icon: Gamepad2, label: "Gaming" },
-    { icon: Palette, label: "Digital Art" },
-    { icon: Music, label: "Music Production" },
-    { icon: Code, label: "Coding" },
+    { icon: Gamepad2, label: "Outer Wilds, Clair Obscur: Expedition 33" },
+    { icon: Palette, label: "Digital Art, Movies, Anime" },
+    { icon: Music, label: "Arctic Monkeys, Hamilton" },
 ];
 
 const About = () => {
@@ -46,16 +45,16 @@ const About = () => {
                     {/* Bio Section */}
                     <div className="grid md:grid-cols-2 gap-18 items-start">
                         {/* Photo */}
-                        <div className="aspect-square bg-muted rounded-lg overflow-hidden border border-border">
+                        <div className="aspect-square bg-muted rounded-lg overflow-hidden border border-border w-[90%]">
                             <img
                                 src={profilePlaceholder}
                                 alt="Profile photo"
-                                className="w-full/20 h-full object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
 
                         {/* Bio Text & Resume */}
-                        <div className="md:col-span-2 space-y-6">
+                        <div className="space-y-6">
                             <div className="space-y-4">
                                 <h2 className="text-2xl font-light">Bio</h2>
                                 <p className="text-muted-foreground leading-relaxed">
