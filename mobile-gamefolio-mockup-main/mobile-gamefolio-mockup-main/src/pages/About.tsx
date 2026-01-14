@@ -12,7 +12,7 @@ const skills = [
 
 const experience = [
     { year: "2025 - Present", role: "Game Designer", company: "PWXR", description: "Internship prototyping a mobile extension for a VR title" },
-    { year: "2024 - 2025", role: "Lab assistant", company: "Gamelab (THUAS)", description: "Maintenance of gaming hardware and a student game" },
+    { year: "2024 - 2025", role: "Lab Assistant", company: "Gamelab (THUAS)", description: "Maintenance of gaming hardware and a student game" },
     { year: "2024 - 2024", role: "Unity Developer", company: "Gamelab (THUAS)", description: "Internship building a digital twin" },
 ];
 
